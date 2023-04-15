@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:mix="http://www.loc.gov/mix/v20"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:cd="http://www.getty.edu/CDWA/CDWALite"
+
+    targetNamespace="http://example.edu/nationalparksXSD"
+    xmlns="http://example.edu/nationalparksXSD"
+    
+    elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.loc.gov/mix/v20" schemaLocation="https://www.loc.gov/standards/mix/mix.xsd"/>
+    <xs:import namespace="http://www.getty.edu/CDWA/CDWALite" schemaLocation="https://www.getty.edu/CDWA/CDWALite/CDWALite-xsd-public-v1-1.xsd"/>
+    <xs:import namespace="http://purl.org/dc/terms/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dcterms.xsd"/>
+
+<!-- This one XSD element is a container for all fifteen XML elements -->
+    <xs:element name="NationalPark">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- 1 - legalName-->
+                <xs:element name="legalName" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute ref="cd:termsource"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <!-- 2 - postalAddress -->
+                <xs:element name="postalAddress" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="streetAddress" minOccurs="0" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="postOfficeBoxNumber" minOccurs="0" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="addressLocality" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="addressRegion" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="addressCountry" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <!-- Note: presently postalCode is defined as a 5 digit number, but if we ever want to 
+                                use the 9 digit postal code, it includes a hyphen, so this subelement would need to be a string instead of an integer -->
+                            <!-- Also using string allows non-U.S. postal codes -->
+                            <xs:element name="postalCode" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                
+                <!-- 3 - DESCRIPTION -->    
+                <xs:element name="parkDescription" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                
+                
+                <!-- 4 - AREASERVED -->    
+                <xs:element name="areaServed" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Northeast"/>
+                            <xs:enumeration value="Southeast"/>
+                            <xs:enumeration value="Midwest"/>
+                            <xs:enumeration value="West"/>
+                            <xs:enumeration value="Southwest"/>
+                            <xs:enumeration value="Non-Contiguous"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>                   
+                    
+                
+                                    
+                
+                <!-- 5 - Available Lodging -->
+                <xs:element name="availableLodging" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="lodgingType" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="lodgingInfoUrl" minOccurs="1" maxOccurs="1" type="xs:string" />
+                                        <xs:element name="adaAccessible" minOccurs="1" maxOccurs="1" >
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Yes" />
+                                                    <xs:enumeration value="No" />
+                                                    <xs:enumeration value="Unknown" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="permitRequired" minOccurs="1" maxOccurs="1" >
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Yes" />
+                                                    <xs:enumeration value="No" />
+                                                    <xs:enumeration value="Recommended" />
+                                                    <xs:enumeration value="Varies" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="reservationsReq" minOccurs="1" maxOccurs="1" >
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Yes" />
+                                                    <xs:enumeration value="No" />
+                                                    <xs:enumeration value="Recommended" />
+                                                    <xs:enumeration value="Varies" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="petFriendly" minOccurs="1" maxOccurs="1" >
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Yes" />
+                                                    <xs:enumeration value="No" />
+                                                    <xs:enumeration value="Unknown" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="type">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="tentCamping" />
+                                                <xs:enumeration value="rvCamping" />
+                                                <xs:enumeration value="wildernessCamping" />
+                                                <xs:enumeration value="primitiveCamping" />
+                                                <xs:enumeration value="cabinRental" />
+                                                <xs:enumeration value="lodgeOrHotel" />
+                                                <xs:enumeration value="horseLodging" />
+                                                <xs:enumeration value="none" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+              
+                <!-- 6 - Contact Info  -->
+                <xs:element name="contactInfo" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="emailAddress" minOccurs="0" maxOccurs="1" type="xs:string" />
+                            <xs:element name="phoneNumber" minOccurs="0" maxOccurs="1" type="xs:string" />
+                            <xs:element name="webUrl" minOccurs="0" maxOccurs="1" type="xs:string" />
+                            <xs:element name="facebookUrl" minOccurs="0" maxOccurs="1" type="xs:string" />
+                            <xs:element name="instagramUrl" minOccurs="0" maxOccurs="1" type="xs:string" />
+                            <xs:element name="twitterHandle" minOccurs="0" maxOccurs="1" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+
+                <!-- 7 - ACCESSFEES -->    
+                <xs:element name="accessFees" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="passType" minOccurs="1" maxOccurs="unbounded">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Annual Pass"/>
+                                        <xs:enumeration value="Single Vehicle"/>
+                                        <xs:enumeration value="Per Person"/>
+                                        <xs:enumeration value="Motorcycle"/>
+                                        <xs:enumeration value="Not Applicable"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="URL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>    
+                    
+                <!-- 8 PARKFACTS -->    
+                <xs:element name="parkFacts" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="climateZone" minOccurs="1" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Tropical Climate"/>
+                                        <xs:enumeration value="Dry Climate"/>
+                                        <xs:enumeration value="Moist Subtropical Mid-Latitude Climate"/>
+                                        <xs:enumeration value="Moist Continental Mid-Latitude Climate"/>
+                                        <xs:enumeration value="Polar Climate"/>
+                                        <xs:enumeration value="Highlands"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="currentWeather" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="parkSQmi" minOccurs="1" maxOccurs="1" type="xs:decimal"/>
+                            <xs:element name="parkSQkm" minOccurs="1" maxOccurs="1" type="xs:decimal"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- 9 - parkHighlights -->
+                <xs:element name="parkHighlights" minOccurs="0" maxOccurs="unbounded" type="xs:string"></xs:element>    
+                
+                <!-- 10 PARKLOGIICS -->    
+                <xs:element name="parkLogistics" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="npsParkMapURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="alertsURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="eventCalendarURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="tripPlanningGuideURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="safetyInfoURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="accessibilityInfoURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="parkAccessURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                            <xs:element name="visitorCenterInfo" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="visitorCenterName" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                                        <xs:element name="visitorCenterOperatingSeasons" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Seasonal"/>
+                                                    <xs:enumeration value="Year-Round"/>
+                                                    <xs:enumeration value="Closed National Holidays"/>
+                                                    <xs:enumeration value="Varies"/>
+                                                    <xs:enumeration value="Winter Closure"/>
+                                                    <xs:enumeration value="Closed"></xs:enumeration>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="visitorCenterOperatingHoursURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>  
+
+                
+                <!-- 11 - Pet Policy -->
+                <xs:element name="petPolicy" minOccurs="1" maxOccurs="1" >
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="petsAllowed" minOccurs="1" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Yes" />
+                                        <xs:enumeration value="No" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="petPolicyUrl" minOccurs="0" maxOccurs="1" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- 12 - activities -->
+                <xs:element name="activities" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="reservationReq" minOccurs="0" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Yes"></xs:enumeration>
+                                        <xs:enumeration value="No"></xs:enumeration>
+                                        <xs:enumeration value="Recommended"></xs:enumeration>
+                                        <xs:enumeration value="Varies"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="permitRequired" minOccurs="0" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Yes"></xs:enumeration>
+                                        <xs:enumeration value="No"></xs:enumeration>
+                                        <xs:enumeration value="Recommended"></xs:enumeration>
+                                        <xs:enumeration value="Varies"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="activityFee" minOccurs="0" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Yes"></xs:enumeration>
+                                        <xs:enumeration value="No"></xs:enumeration>
+                                        <xs:enumeration value="Unknown"></xs:enumeration>
+                                        <xs:enumeration value="Varies"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="adaAccessible" minOccurs="0" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Yes"></xs:enumeration>
+                                        <xs:enumeration value="No"></xs:enumeration>
+                                        <xs:enumeration value="Unknown"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="activitySubtype" minOccurs="0" maxOccurs="unbounded" type="xs:string"></xs:element>
+                            <xs:element name="activityUrl" minOccurs="0" maxOccurs="1" type="xs:string"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="activityType">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Bicycling"></xs:enumeration>
+                                    <xs:enumeration value="Boating-Motorized"></xs:enumeration>
+                                    <xs:enumeration value="Boating-KayakORCanoe"></xs:enumeration>
+                                    <xs:enumeration value="Boating-Rafting"></xs:enumeration>
+                                    <xs:enumeration value="Climbing"></xs:enumeration>
+                                    <xs:enumeration value="Educational Opportunities-Cultural"></xs:enumeration>
+                                    <xs:enumeration value="Educational Opportunities-Historical"></xs:enumeration>
+                                    <xs:enumeration value="Educational Opportunities-Natural"></xs:enumeration>
+                                    <xs:enumeration value="Fishing"></xs:enumeration>
+                                    <xs:enumeration value="Geocaching"></xs:enumeration>
+                                    <xs:enumeration value="Geological Features"></xs:enumeration>
+                                    <xs:enumeration value="Hiking-Day"></xs:enumeration>
+                                    <xs:enumeration value="Hiking-Back Country"></xs:enumeration>
+                                    <xs:enumeration value="Hunting"></xs:enumeration>
+                                    <xs:enumeration value="Photography"></xs:enumeration>
+                                    <xs:enumeration value="Snowmobiling"></xs:enumeration>
+                                    <xs:enumeration value="SnowboardingORSnowskiing"></xs:enumeration>
+                                    <xs:enumeration value="Stargazing"></xs:enumeration>
+                                    <xs:enumeration value="Swimming"></xs:enumeration>
+                                    <xs:enumeration value="Tidepooling"></xs:enumeration>
+                                    <xs:enumeration value="Tours-Guided"></xs:enumeration>
+                                    <xs:enumeration value="Tours-Self-Guided"></xs:enumeration>
+                                    <xs:enumeration value="Wildlife Viewing"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>        
+                </xs:element>
+
+                <!-- 13 - Park Images DONE -->
+                <xs:element name="parkImages" minOccurs="0" maxOccurs="unbounded" type="mix:BasicDigitalObjectInformationType"/>
+                
+                <!-- 14 - PARKENTRENCEPASSES -->
+                <xs:element name="parkEntrancePasses" minOccurs="1" maxOccurs="1" type="xs:string"/>
+
+                <!-- 15 - Languages DONE -->
+                <xs:element name="availableLanguage" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="language" minOccurs="1" maxOccurs="unbounded" type="xs:string"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute ref="cd:termsource"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+             </xs:sequence>                    
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
