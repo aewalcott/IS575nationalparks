@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<NationalPark 
+    xmlns="https://aewalcott.github.io/IS575nationalparks"  
+    xmlns:xsi="http://www.w3.org/2001/XML-instance"
+    xmlns:cd="http://www.getty.edu/CDWA/CDWALite"
+    xmlns:mix="http://www.loc.gov/mix/v20"
+    xmlns:schemaLocation="https://aewalcott.github.io/IS575nationalparks/nationalparks_schema20230408.xsd" 
+   >
+
+    <legalName cd:termsource="TGN">
+        <name>Acadia National Park</name>
+    </legalName>
+
+    <postalAddress>
+        <postOfficeBoxNumber>PO Box 177</postOfficeBoxNumber>
+        <addressLocality>Bar Harbor</addressLocality>
+        <addressRegion>ME</addressRegion>
+        <addressCountry>USA</addressCountry>
+        <postalCode>04609</postalCode>
+    </postalAddress>
+
+    <parkDescription>
+        Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic 
+        coastline of the United States, an abundance of habitats, and a rich cultural heritage. At 4 million 
+        visits a year, it's one of the top 10 most-visited national parks in the United States. Visitors 
+        enjoy 27 miles of historic motor roads, 158 miles of hiking trails, and 45 miles of carriage roads.
+    </parkDescription>
+
+    <areaServed>Northeast</areaServed>
+    
+    <availableLodging>
+        <lodgingType type="tentCamping">
+            <lodgingInfoUrl>https://www.nps.gov/acad/planyourvisit/camping.htm</lodgingInfoUrl>
+            <adaAccessible>Yes</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Yes</reservationsReq>
+            <petFriendly>Yes</petFriendly>
+        </lodgingType>
+        <lodgingType type="rvCamping">
+            <lodgingInfoUrl>https://www.nps.gov/acad/planyourvisit/camping.htm</lodgingInfoUrl>
+            <adaAccessible>Yes</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Yes</reservationsReq>
+            <petFriendly>Yes</petFriendly>
+        </lodgingType>
+        <lodgingType type="horseLodging">
+            <lodgingInfoUrl>https://acadiahorses.com/</lodgingInfoUrl>
+            <adaAccessible>Unknown</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Yes</reservationsReq>
+            <petFriendly>No</petFriendly>
+        </lodgingType>
+    </availableLodging>
+    
+    <contactInfo>
+        <emailAddress>acadia_information@nps.gov</emailAddress>
+        <phoneNumber>207-288-3338</phoneNumber>
+        <webUrl>https://www.nps.gov/acad/index.htm</webUrl>
+        <facebookUrl>https://www.facebook.com/AcadiaNPS</facebookUrl>
+        <instagramUrl>https://www.instagram.com/AcadiaNPS</instagramUrl>
+        <twitterHandle>@AcadiaNPS</twitterHandle>
+    </contactInfo>
+    
+    <accessFees>
+        <passType>Annual Pass</passType>
+        <passType>Single Vehicle</passType>
+        <passType>Per Person</passType>
+        <passType>Motorcycle</passType>
+        <URL>https://www.nps.gov/acad/planyourvisit/fees.htm</URL>
+    </accessFees>
+    
+    <parkFacts>
+        <climateZone>Moist Continental Mid-Latitude Climate</climateZone>
+        <currentWeather>
+            https://www.accuweather.com/en/us/acadia-national-park/04660/weather-forecast/19666_poi
+        </currentWeather>
+        <parkSQmi>76.7</parkSQmi>
+        <parkSQkm>198.6</parkSQkm>
+    </parkFacts>
+    
+    <parkHighlights>coastal islands</parkHighlights>
+    <parkHighlights>ocean coastline</parkHighlights>
+    <parkHighlights>Mount Desert Island</parkHighlights>
+    <parkHighlights>Schoodic Peninsula</parkHighlights>
+    <parkHighlights>Isle au Haut</parkHighlights>
+    <parkHighlights>carriage roads, bridges, gatehouses</parkHighlights>
+    
+    <parkLogistics>
+        <npsParkMapURL>https://www.nps.gov/acad/planyourvisit/maps.htm</npsParkMapURL>
+        <alertsURL>https://www.nps.gov/acad/planyourvisit/conditions.htm</alertsURL>
+        <eventCalendarURL>https://www.nps.gov/acad/planyourvisit/calendar.htm</eventCalendarURL>
+        <tripPlanningGuideURL>https://www.nps.gov/acad/planyourvisit/index.htm</tripPlanningGuideURL>
+        <safetyInfoURL>https://www.nps.gov/acad/planyourvisit/safety.htm</safetyInfoURL>
+        <accessibilityInfoURL>
+            https://www.nps.gov/acad/planyourvisit/accessibility.htm
+        </accessibilityInfoURL>
+        <parkAccessURL>https://www.nps.gov/acad/planyourvisit/hours.htm</parkAccessURL>
+        <visitorCenterInfo>
+            <visitorCenterName>Hulls Cove Visitor Center</visitorCenterName>    
+            <visitorCenterOperatingSeasons>Winter Closure</visitorCenterOperatingSeasons>
+            <visitorCenterOperatingHoursURL>https://www.nps.gov/acad/planyourvisit/hours.htm</visitorCenterOperatingHoursURL>
+        </visitorCenterInfo>
+        <visitorCenterInfo>
+            <visitorCenterName>Bar Harbor Chamber of Commerce</visitorCenterName>    
+            <visitorCenterOperatingSeasons>Seasonal</visitorCenterOperatingSeasons>
+            <visitorCenterOperatingHoursURL>https://www.nps.gov/acad/planyourvisit/hours.htm</visitorCenterOperatingHoursURL>
+        </visitorCenterInfo>
+    </parkLogistics>
+    
+    <petPolicy>
+        <petsAllowed>Yes</petsAllowed>
+        <petPolicyUrl>https://www.nps.gov/acad/planyourvisit/pets.htm</petPolicyUrl>
+    </petPolicy>
+    
+    <activities activityType="Hiking-Day">
+        <reservationReq>Varies</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>No</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/bicycling.htm</activityUrl>
+    </activities>
+    <activities activityType="Bicycling">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/hiking.htm</activityUrl>
+    </activities>
+    <activities activityType="Wildlife Viewing">
+        <reservationReq>Varies</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activitySubtype>birding</activitySubtype>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/birdwatching.htm</activityUrl>
+    </activities>
+    <activities activityType="Stargazing">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/stargazing.htm</activityUrl>
+    </activities>
+    <activities activityType="Swimming">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/swimming.htm</activityUrl>
+    </activities>
+    <activities activityType="Tidepooling">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>No</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/tidepooling.htm</activityUrl>
+    </activities>
+    <activities activityType="Boating-Motorized">
+        <reservationReq>No</reservationReq>
+        <permitRequired>Yes</permitRequired>
+        <activityFee>Varies</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/boating.htm</activityUrl>
+    </activities>
+    <activities activityType="Boating-KayakORCanoe">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>Varies</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/boating.htm</activityUrl>
+    </activities>
+    <activities activityType="Educational Opportunities-Historical">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>Unknown</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/learn/historyculture/places.htm</activityUrl>
+    </activities>
+    <activities activityType="Climbing">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>https://www.nps.gov/acad/planyourvisit/hike-summit.htm</activityUrl>
+    </activities>
+    
+    <parkImages>
+        <mix:ObjectIdentifier>
+            <mix:objectIdentifierType>URI</mix:objectIdentifierType>
+            <mix:objectIdentifierValue>https://npgallery.nps.gov/GetAsset/52c19565-9f7b-4437-866d-1caea91b9250/proxymdres.jpg?</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>909100</mix:fileSize>
+        <mix:FormatDesignation>
+            <mix:formatName>image/jpeg</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Compression>
+            <mix:compressionScheme>JPEG (old-style)</mix:compressionScheme>
+        </mix:Compression>
+    </parkImages>
+    
+    <parkEntrancePasses>https://www.nps.gov/planyourvisit/passes.htm</parkEntrancePasses>
+
+    <availableLanguage xmlns:dcterms="http://purl.org/dc/terms/" cd:termsource="ISO639-2">
+        <language>eng</language>
+    </availableLanguage> 
+    
+</NationalPark>
+

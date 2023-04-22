@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NO default schema, so all elements must have prefixes -->
+
+<NationalPark 
+    xmlns:cd="http://www.getty.edu/CDWA/CDWALite"
+    xmlns:mix="http://www.loc.gov/mix/v20"
+    xmlns:xsi="http://www.w3.org/2001/XML-instance"
+    xmlns="https://aewalcott.github.io/IS575nationalparks"
+    xmlns:schemaLocation="https://aewalcott.github.io/IS575nationalparks/nationalparks_schema20230408.xsd">
+ 
+    
+    <legalName cd:termsource="TGN">
+        <name>Grand Canyon National Park</name>
+    </legalName>
+    <postalAddress>
+        <postOfficeBoxNumber>P.O. Box 129</postOfficeBoxNumber>
+        <addressLocality>Grand Canyon</addressLocality>
+        <addressRegion>AZ</addressRegion>
+        <addressCountry>USA</addressCountry>
+        <postalCode>86023</postalCode>
+    </postalAddress>
+    <parkDescription>The Grand Canyon of the Colorado River is a mile-deep canyon (1.6 km) that bisects the park. 
+        Even though the average distance across the canyon is only 10 miles/ 16 km, it takes 5 hours to drive the 
+        215 miles / 346 km between the park's South Rim Village and the North Rim Village.
+    </parkDescription>
+    <areaServed>Southwest</areaServed>
+    <availableLodging>
+        <lodgingType type="tentCamping">
+            <lodgingInfoUrl>https://www.nps.gov/grca/planyourvisit/camping.htm</lodgingInfoUrl>
+            <adaAccessible>Yes</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Yes</reservationsReq>
+            <petFriendly>Yes</petFriendly>
+        </lodgingType>
+        <lodgingType type="rvCamping">
+            <lodgingInfoUrl>https://www.nps.gov/grca/planyourvisit/camping.htm</lodgingInfoUrl>
+            <adaAccessible>Yes</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Recommended</reservationsReq>
+            <petFriendly>Yes</petFriendly>
+        </lodgingType>        
+        <lodgingType type="wildernessCamping">
+            <lodgingInfoUrl>https://www.nps.gov/grca/planyourvisit/backcountry-permit.htm</lodgingInfoUrl>
+            <adaAccessible>Unknown</adaAccessible>
+            <permitRequired>Yes</permitRequired>
+            <reservationsReq>Recommended</reservationsReq>
+            <petFriendly>No</petFriendly>
+        </lodgingType>
+        <lodgingType type="lodgeOrHotel">
+            <lodgingInfoUrl>https://www.nps.gov/grca/planyourvisit/lodging.htm</lodgingInfoUrl>
+            <adaAccessible>Unknown</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Yes</reservationsReq>
+            <petFriendly>Yes</petFriendly>
+        </lodgingType>
+        <lodgingType type="horseLodging">
+            <lodgingInfoUrl>https://www.nps.gov/grca/planyourvisit/camping.htm</lodgingInfoUrl>
+            <adaAccessible>Yes</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Yes</reservationsReq>
+            <petFriendly>Yes</petFriendly>
+        </lodgingType>        
+    </availableLodging>
+    <contactInfo>
+        <emailAddress>grca_information@nps.gov</emailAddress>
+        <phoneNumber>928-638-7888</phoneNumber>
+        <webUrl>https://www.nps.gov/grca/index.htm</webUrl>
+        <facebookUrl>https://www.facebook.com/GrandCanyonNationalPark</facebookUrl>
+        <instagramUrl>https://www.instagram.com/grandcanyonnps/</instagramUrl>
+        <twitterHandle>@GrandCanyonNPS</twitterHandle>
+    </contactInfo>
+    <accessFees>
+        <passType>Annual Pass</passType>
+        <passType>Single Vehicle</passType>
+        <passType>Per Person</passType>
+        <passType>Motorcycle</passType>
+        <URL>https://www.nps.gov/grca/planyourvisit/fees.htm</URL>
+    </accessFees>
+    <parkFacts>
+        <climateZone>Dry Climate</climateZone>
+        <currentWeather>https://www.accuweather.com/en/us/grand-canyon-national-park/86023/weather-forecast/12893_poi</currentWeather>
+        <parkSQmi>1904</parkSQmi>
+        <parkSQkm>4931</parkSQkm>
+    </parkFacts>
+    <parkHighlights>Desert Views</parkHighlights>
+    <parkHighlights>River Rafting</parkHighlights>
+    <parkHighlights>Mule Trips</parkHighlights>
+    <parkHighlights>Mather Point</parkHighlights>
+    <parkLogistics>
+        <npsParkMapURL>https://www.nps.gov/grca/planyourvisit/maps.htm</npsParkMapURL>
+            <alertsURL>https://www.nps.gov/grca/planyourvisit/conditions.htm</alertsURL>
+            <eventCalendarURL>https://www.nps.gov/grca/planyourvisit/calendar.htm</eventCalendarURL>
+            <tripPlanningGuideURL>https://www.nps.gov/grca/planyourvisit/index.htm</tripPlanningGuideURL>
+            <safetyInfoURL>https://www.nps.gov/grca/planyourvisit/safety.htm</safetyInfoURL>
+            <accessibilityInfoURL>https://www.nps.gov/grca/planyourvisit/accessibility.htm</accessibilityInfoURL>
+        <parkAccessURL>https://www.nps.gov/grca/planyourvisit/accessibility.htm</parkAccessURL>
+        <visitorCenterInfo>
+                <visitorCenterName>Grand Canyon Visitor Center</visitorCenterName>
+            <visitorCenterOperatingSeasons>Varies</visitorCenterOperatingSeasons>
+                <visitorCenterOperatingHoursURL>https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm</visitorCenterOperatingHoursURL>
+        </visitorCenterInfo>
+    </parkLogistics>
+    <petPolicy>
+        <petsAllowed>Yes</petsAllowed>
+        <petPolicyUrl>https://www.nps.gov/grca/planyourvisit/pets.htm</petPolicyUrl>
+    </petPolicy>
+    <activities activityType="Hiking-Day">
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activityUrl>nps.gov/mora/planyourvisit/wilderness-camping-and-hiking.htm</activityUrl>
+    </activities>
+    <activities activityType="Hiking-Back Country">
+        <permitRequired>Yes</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>nps.gov/grca/planyourvisit/wilderness-camping-and-hiking.htm</activityUrl>
+    </activities>
+    <activities activityType="Bicycling">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>https://www.nps.gov/grca/planyourvisit/bicycling.htm</activityUrl>
+    </activities>
+    <activities activityType="Educational Opportunities-Cultural">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activitySubtype>People, Places, Collections, Archeology</activitySubtype>
+        <activityUrl>https://www.nps.gov/grca/learn/historyculture/index.htm</activityUrl>
+    </activities>
+    <activities activityType="Educational Opportunities-Historical">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activityUrl>https://www.nps.gov/grca/planyourvisit/audio-tours.htm</activityUrl>
+        </activities>
+    <activities activityType="Educational Opportunities-Natural">
+        <reservationReq>No</reservationReq>
+        <permitRequired>Yes</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activitySubtype>Geology, Fisherines, Wildlife, Plants, Trail of Time</activitySubtype>
+        <activityUrl>https://www.nps.gov/grca/learn/nature/index.htm</activityUrl>
+    </activities>
+    <activities activityType="Geological Features">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+    </activities>
+    <activities activityType="Boating-Rafting">
+        <reservationReq>Yes</reservationReq>
+        <permitRequired>Varies</permitRequired>
+        <activityFee>Yes</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>https://www.nps.gov/grca/planyourvisit/whitewater-rafting.htm</activityUrl>
+    </activities>
+        <activities activityType="Photography">
+        <reservationReq>No</reservationReq>
+        <permitRequired>Varies</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>https://www.nps.gov/grca/planyourvisit/photography.htm</activityUrl>
+    </activities>
+    <activities activityType="Stargazing">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Unknown</adaAccessible>
+        <activityUrl>https://www.nps.gov/grca/learn/nature/night-skies.htm</activityUrl>
+    </activities>
+    <activities activityType="Tours-Guided">
+        <reservationReq>Yes</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>Varies</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activitySubtype>Hiking, Backpacking, Bicycle, Bus, Jeep and Van, Mule, White Water Rafting, Air Tours, Trail Rides</activitySubtype>
+        <activityUrl>https://www.nps.gov/grca/planyourvisit/guidedtours.htm</activityUrl>
+    </activities>
+    <activities activityType="Tours-Self-Guided">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activitySubtype>Audio Tours via the National Park Service App</activitySubtype>
+        <activityUrl>https://www.nps.gov/grca/planyourvisit/audio-tours.htm</activityUrl>
+    </activities>
+    <activities activityType="Tours-Self-Guided">
+        <reservationReq>No</reservationReq>
+        <permitRequired>No</permitRequired>
+        <activityFee>No</activityFee>
+        <adaAccessible>Yes</adaAccessible>
+        <activitySubtype>The Trail of Time</activitySubtype>
+        <activityUrl>https://www.nps.gov/grca/planyourvisit/the-trail-of-time.htm</activityUrl>
+    </activities>
+    <parkImages>
+       <mix:ObjectIdentifier>
+                <mix:objectIdentifierType>URI</mix:objectIdentifierType>
+                <mix:objectIdentifierValue>https://www.flickr.com/photos/grand_canyon_nps/5738165358/in/album-72157626304754703/</mix:objectIdentifierValue>
+            </mix:ObjectIdentifier>
+            <mix:fileSize>7131000</mix:fileSize>
+            <mix:FormatDesignation>
+                <mix:formatName>image/jpeg</mix:formatName>
+            </mix:FormatDesignation>
+            <mix:Compression>
+                <mix:compressionScheme>JPEG (old-style)</mix:compressionScheme>
+            </mix:Compression>
+    </parkImages>
+    <parkEntrancePasses>https://www.nps.gov/planyourvisit/passes.htm</parkEntrancePasses>
+    <availableLanguage xmlns:dcterms="http://purl.org/dc/terms/" cd:termsource="ISO639-2">
+        <language>eng</language>
+    </availableLanguage>           
+</NationalPark>
+
+
+

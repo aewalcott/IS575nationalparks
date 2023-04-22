@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NationalPark
+    xmlns="https://aewalcott.github.io/IS575nationalparks"
+    xmlns:cd="http://www.getty.edu/CDWA/CDWALite"
+    xmlns:mix="http://www.loc.gov/mix/v20"
+    xmlns:xsi="http://www.w3.org/2001/XMLnp-instance"
+    xmlns:schemaLocation="https://aewalcott.github.io/IS575nationalparks/nationalparks_schema20230408.xsd">
+    <legalName>
+        <name>Everglades National Park</name>
+    </legalName>
+    <postalAddress>
+        <postOfficeBoxNumber>P.O. Box 279</postOfficeBoxNumber>
+        <addressLocality>Homestead</addressLocality>
+        <addressRegion>FL</addressRegion>
+        <addressCountry>USA</addressCountry>
+        <postalCode>33034</postalCode>
+    </postalAddress>
+    <parkDescription>Everglades National Park is an American national park that protects the southern twenty percent 
+        of the original Everglades in Florida. The park is the largest tropical wilderness in the United States and the 
+        largest wilderness of any kind east of the Mississippi River. An average of one million people visit the park 
+        each year.[5] Everglades is the third-largest national park in the contiguous United States after Death Valley 
+        and Yellowstone.</parkDescription>
+    <areaServed>Southeast</areaServed>
+    <availableLodging>
+        <lodgingType type="tentCamping">
+            <lodgingInfoUrl>https://www.nps.gov/ever/planyourvisit/camping.htm</lodgingInfoUrl>
+            <adaAccessible>Yes</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Recommended</reservationsReq>
+            <petFriendly>Yes</petFriendly>
+        </lodgingType>
+        <lodgingType type="rvCamping">
+            <lodgingInfoUrl>https://www.nps.gov/ever/planyourvisit/camping.htm</lodgingInfoUrl>
+            <adaAccessible>Yes</adaAccessible>
+            <permitRequired>No</permitRequired>
+            <reservationsReq>Recommended</reservationsReq>
+            <petFriendly>Yes</petFriendly>
+        </lodgingType>
+        <lodgingType type="wildernessCamping">
+            <lodgingInfoUrl>https://www.nps.gov/ever/planyourvisit/wildernesscamp.htm</lodgingInfoUrl>
+            <adaAccessible>Unknown</adaAccessible>
+            <permitRequired>Yes</permitRequired>
+            <reservationsReq>Yes</reservationsReq>
+            <petFriendly>No</petFriendly>
+        </lodgingType>
+    </availableLodging>
+    <contactInfo>
+        <emailAddress>ever_information@nps.gov</emailAddress>
+        <phoneNumber>305-242-7700</phoneNumber>
+        <webUrl>https://www.nps.gov/ever/index.htm</webUrl>
+        <facebookUrl>https://www.facebook.com/EvergladesNationalPark/</facebookUrl>
+        <instagramUrl>https://www.instagram.com/EvergladesNPS/</instagramUrl>
+        <twitterHandle>@EvergladesNPS</twitterHandle>
+    </contactInfo>
+    <accessFees>
+        <passType>Annual Pass</passType>
+        <passType>Single Vehicle</passType>
+        <passType>Motorcycle</passType>
+        <passType>Per Person</passType>
+        <URL>https://www.nps.gov/ever/planyourvisit/fees.htm</URL>
+    </accessFees>
+    <parkFacts>
+        <climateZone>Tropical Climate</climateZone>
+        <currentWeather>https://www.accuweather.com/en/us/everglades-ccd/33194/weather-forecast/2645220</currentWeather>
+        <parkSQmi>2356.6</parkSQmi>
+        <parkSQkm>6106.61</parkSQkm>
+    </parkFacts>
+    <parkHighlights>Largest continuous stand of sawgrass prairie in North America</parkHighlights>
+    <parkHighlights>Wetlands</parkHighlights>
+    <parkHighlights>Wildlife</parkHighlights>
+    <parkLogistics>
+        <npsParkMapURL>https://www.nps.gov/ever/planyourvisit/maps.htm</npsParkMapURL>
+        <alertsURL>https://www.nps.gov/ever/planyourvisit/conditions.htm</alertsURL>
+        <eventCalendarURL>https://www.nps.gov/ever/planyourvisit/calendar.htm</eventCalendarURL>
+        <tripPlanningGuideURL>https://www.nps.gov/ever/planyourvisit/index.htm</tripPlanningGuideURL>
+        <safetyInfoURL>https://www.nps.gov/ever/planyourvisit/safety.htm</safetyInfoURL>
+        <accessibilityInfoURL>https://www.nps.gov/ever/planyourvisit/accessibility.htm</accessibilityInfoURL>
+        <parkAccessURL>https://www.nps.gov/ever/planyourvisit/hours.htm</parkAccessURL>
+        <visitorCenterInfo>
+            <visitorCenterName>Ernest F. Coe Visitor Center</visitorCenterName>
+            <visitorCenterOperatingSeasons>Year-Round</visitorCenterOperatingSeasons>
+            <visitorCenterOperatingHoursURL>https://www.nps.gov/ever/planyourvisit/coedirections.htm</visitorCenterOperatingHoursURL>
+        </visitorCenterInfo>
+        <visitorCenterInfo>
+            <visitorCenterName>Flamingo</visitorCenterName>
+            <visitorCenterOperatingSeasons>Year-Round</visitorCenterOperatingSeasons>
+            <visitorCenterOperatingHoursURL>https://www.nps.gov/ever/planyourvisit/flamdirections.htm</visitorCenterOperatingHoursURL>
+        </visitorCenterInfo>
+        <visitorCenterInfo>
+            <visitorCenterName>Shark Valley</visitorCenterName>
+            <visitorCenterOperatingSeasons>Year-Round</visitorCenterOperatingSeasons>
+            <visitorCenterOperatingHoursURL>https://www.nps.gov/ever/planyourvisit/svdirections.htm</visitorCenterOperatingHoursURL>
+        </visitorCenterInfo>
+        <visitorCenterInfo>
+            <visitorCenterName>Gulf Coast</visitorCenterName>
+            <visitorCenterOperatingSeasons>Closed</visitorCenterOperatingSeasons>
+            <visitorCenterOperatingHoursURL>https://www.nps.gov/ever/planyourvisit/gcdirections.htm</visitorCenterOperatingHoursURL>
+        </visitorCenterInfo>
+    </parkLogistics>
+    <petPolicy>
+        <petsAllowed>Yes</petsAllowed>
+        <petPolicyUrl>https://www.nps.gov/ever/planyourvisit/pets.htm</petPolicyUrl>
+    </petPolicy>
+        <activities activityType="Bicycling">
+            <permitRequired>No</permitRequired>
+            <activityFee>No</activityFee>
+            <adaAccessible>Yes</adaAccessible>
+            <activityUrl>https://www.nps.gov/ever/planyourvisit/biking.htm</activityUrl>
+        </activities>
+        <activities activityType="Wildlife Viewing">
+            <permitRequired>No</permitRequired>
+            <activityFee>No</activityFee>
+            <adaAccessible>Yes</adaAccessible>
+            <activitySubtype>Birding</activitySubtype>
+            <activityUrl>https://www.nps.gov/ever/planyourvisit/bird-watching-spots.htm</activityUrl>
+        </activities>
+        <activities activityType="Boating-Motorized">
+            <reservationReq>No</reservationReq>
+            <permitRequired>Yes</permitRequired>
+            <activityFee>Varies</activityFee>
+            <adaAccessible>Unknown</adaAccessible>
+            <activityUrl>https://www.nps.gov/ever/planyourvisit/boating.htm</activityUrl>
+        </activities>
+        <activities activityType="Fishing">
+            <reservationReq>No</reservationReq>
+            <permitRequired>Yes</permitRequired>
+            <activityFee>No</activityFee>
+            <adaAccessible>Unknown</adaAccessible>
+            <activityUrl>https://www.nps.gov/ever/planyourvisit/fishing.htm</activityUrl>
+        </activities>
+        <activities activityType="Boating-KayakORCanoe">
+            <reservationReq>No</reservationReq>
+            <permitRequired>No</permitRequired>
+            <activityFee>Varies</activityFee>
+            <adaAccessible>Unknown</adaAccessible>
+            <activityUrl>https://www.nps.gov/ever/planyourvisit/canoe-and-kayak-trails.htm</activityUrl>
+        </activities>
+        <activities activityType="Geocaching">
+            <permitRequired>No</permitRequired>
+            <activityFee>No</activityFee>
+            <adaAccessible>Unknown</adaAccessible>
+            <activityUrl>https://www.nps.gov/ever/planyourvisit/geocaching.htm</activityUrl>
+        </activities>
+        <activities activityType="Hiking-Day">
+            <permitRequired>No</permitRequired>
+            <activityFee>No</activityFee>
+            <adaAccessible>Yes</adaAccessible>
+            <activityUrl>https://www.nps.gov/ever/planyourvisit/hiking-trails.htm</activityUrl>
+        </activities>
+        <activities activityType="Tours-Guided">
+            <reservationReq>Varies</reservationReq>
+            <permitRequired>Varies</permitRequired>
+            <activityFee>Varies</activityFee>
+            <adaAccessible>Unknown</adaAccessible>
+            <activitySubtype>Slough slogging, Tram tours, Airboat tours, Eco tours, Photography tours, Ranger-Guided tours, Canoe and kayak tours</activitySubtype>
+            <activityUrl>https://www.nps.gov/ever/planyourvisit/guidedtours.htm</activityUrl>
+        </activities>
+    
+    <parkImages>
+        <mix:ObjectIdentifier>
+            <mix:objectIdentifierType>URI</mix:objectIdentifierType>
+            <mix:objectIdentifierValue>http://national-park.com/wp-content/uploads/2016/04/Welcome-to-Everglades-National-Park.jpg</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>104378</mix:fileSize>
+        <mix:FormatDesignation>
+            <mix:formatName>image/jpeg</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Compression>
+            <mix:compressionScheme>JPEG (old-style)</mix:compressionScheme>
+        </mix:Compression>
+    </parkImages>
+    <parkEntrancePasses>https://www.nps.gov/planyourvisit/passes.htm</parkEntrancePasses>
+    <availableLanguage xmlns:dcterms="http://purl.org/dc/terms/" cd:termsource="ISO639-2">
+        <language>eng</language>
+    </availableLanguage>
+</NationalPark>
