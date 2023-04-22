@@ -5,8 +5,8 @@
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:cd="http://www.getty.edu/CDWA/CDWALite"
 
-    targetNamespace="http://example.edu/nationalparksXSD"
-    xmlns="http://example.edu/nationalparksXSD"
+    targetNamespace="https://aewalcott.github.io/IS575nationalparks"
+    xmlns="https://aewalcott.github.io/IS575nationalparks"
     
     elementFormDefault="qualified">
 
