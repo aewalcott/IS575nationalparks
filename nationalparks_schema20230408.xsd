@@ -18,17 +18,27 @@
     <xs:element name="NationalPark">
         <xs:complexType>
             <xs:sequence>
-                <!-- 1 - legalName-->
+                <!-- 1 - Park Name -->
                 <xs:element name="legalName" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Official name of the park.  
+                            CDWALite "termsourse" is used in conjunction with Getty's Thesaurus of Geographic Names as controlled vocabulary. 
+                        </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
                         </xs:sequence>
                         <xs:attribute ref="cd:termsource"></xs:attribute>
                     </xs:complexType>
+
                 </xs:element>
-                <!-- 2 - postalAddress -->
+                <!-- 2 - Park Addresses -->
                 <xs:element name="postalAddress" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Mailing and/or navigation address(es) of the park </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="streetAddress" minOccurs="0" maxOccurs="1" type="xs:string"></xs:element>
@@ -36,21 +46,30 @@
                             <xs:element name="addressLocality" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
                             <xs:element name="addressRegion" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
                             <xs:element name="addressCountry" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
-                            <!-- Note: presently postalCode is defined as a 5 digit number, but if we ever want to 
-                                use the 9 digit postal code, it includes a hyphen, so this subelement would need to be a string instead of an integer -->
-                            <!-- Also using string allows non-U.S. postal codes -->
+                            <!-- Note about postalCode subelement: 
+                                -Official U.S. postal code is a ten digit alphanumeric string (NNNNN-NNNN).  Even though most users will 
+                                only use the five digit numeric zip code, this subelement needs to be a string.
+                                -Also using string allows for non-U.S. postal codes -->
                             <xs:element name="postalCode" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
                 
                 
-                <!-- 3 - DESCRIPTION -->    
-                <xs:element name="parkDescription" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                <!-- 3 - Park Description -->    
+                <xs:element name="parkDescription" minOccurs="1" maxOccurs="1" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Brief description of the park</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
                 
-                
-                <!-- 4 - AREASERVED -->    
+                <!-- 4 - U.S. Region -->    
                 <xs:element name="areaServed" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The geographic area where a service or offered item is provided; used to specify geographic region in which a U.S. National Park resides. 
+                        </xs:documentation>
+                    </xs:annotation>
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
                             <xs:enumeration value="Northeast"/>
@@ -68,6 +87,11 @@
                 
                 <!-- 5 - Available Lodging -->
                 <xs:element name="availableLodging" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Holding element for sub-elements that describe types of lodging that are available at the given park, along with extra information about each type of lodging. 
+                        </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="lodgingType" minOccurs="1" maxOccurs="unbounded">
@@ -135,6 +159,11 @@
               
                 <!-- 6 - Contact Info  -->
                 <xs:element name="contactInfo" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Holding element for sub-elements that provide several ways of contacting the park, including: email address, phone number, website URL, Facebook URL, Instagram URL, and Twitter handle. 
+                        </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="emailAddress" minOccurs="0" maxOccurs="1" type="xs:string" />
@@ -148,8 +177,11 @@
                 </xs:element>
 
 
-                <!-- 7 - ACCESSFEES -->    
+                <!-- 7 - Access Fees -->    
                 <xs:element name="accessFees" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Holding element for sub-elements that describe the fees required to gain access or entry to a park or section of a park.</xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="passType" minOccurs="1" maxOccurs="unbounded">
@@ -168,8 +200,11 @@
                     </xs:complexType>
                 </xs:element>    
                     
-                <!-- 8 PARKFACTS -->    
+                <!-- 8 Park Facts -->    
                 <xs:element name="parkFacts" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Holding element for sub-elements that describe the size of a U.S. National Park in miles/km and the weather/climate of the park. </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="climateZone" minOccurs="1" maxOccurs="1">
@@ -191,11 +226,21 @@
                     </xs:complexType>
                 </xs:element>
                 
-                <!-- 9 - parkHighlights -->
-                <xs:element name="parkHighlights" minOccurs="0" maxOccurs="unbounded" type="xs:string"></xs:element>    
+                <!-- 9 - Park Highlights -->
+                <xs:element name="parkHighlights" minOccurs="0" maxOccurs="unbounded" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>"Can't Miss" attractions at the park.</xs:documentation>
+                    </xs:annotation>
+                </xs:element>    
                 
-                <!-- 10 PARKLOGIICS -->    
+                <!-- 10 Trip Planning & Logistics -->    
                 <xs:element name="parkLogistics" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Holding element for the sub-elements that describe the logistics of planning a visit to a U.S. National Park: 
+                            safety alerts, operating hours, maps, and accessibility info are included. 
+                        </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="npsParkMapURL" minOccurs="1" maxOccurs="1" type="xs:string"></xs:element>
@@ -230,8 +275,11 @@
                 </xs:element>  
 
                 
-                <!-- 11 - Pet Policy -->
+                <!-- 11 - Pet Policy for Park Visitors -->
                 <xs:element name="petPolicy" minOccurs="1" maxOccurs="1" >
+                    <xs:annotation>
+                        <xs:documentation>Holding element for sub-elements describing the park’s policy for bringing pets on park property. </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="petsAllowed" minOccurs="1" maxOccurs="1">
@@ -247,8 +295,12 @@
                     </xs:complexType>
                 </xs:element>
                 
-                <!-- 12 - activities -->
+                <!-- 12 - Activities -->
                 <xs:element name="activities" minOccurs="1" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Activities available at the park and information on accessing those activities, including if fees, permits, ADA accessibility, etc.</xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="reservationReq" minOccurs="0" maxOccurs="1">
@@ -325,14 +377,35 @@
                     </xs:complexType>        
                 </xs:element>
 
-                <!-- 13 - Park Images DONE -->
-                <xs:element name="parkImages" minOccurs="0" maxOccurs="unbounded" type="mix:BasicDigitalObjectInformationType"/>
+                <!-- 13 - Park Images -->
+                <xs:element name="parkImages" minOccurs="0" maxOccurs="unbounded" type="mix:BasicDigitalObjectInformationType">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Holding element for sub-elements describing digital images of the park or its features. 
+                            Element uses Library of Congress "mix" element for digital imagery.  
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
                 
-                <!-- 14 - PARKENTRENCEPASSES -->
-                <xs:element name="parkEntrancePasses" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                <!-- 14 - Park Entrance Passes -->
+                <xs:element name="parkEntrancePasses" minOccurs="1" maxOccurs="1" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Element with URL to link types of discounts or annual passes that are available 
+                            to guests of a U.S. National Park that meet requirements for each pass type. 
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
 
-                <!-- 15 - Languages DONE -->
+                <!-- 15 - Languages  -->
                 <xs:element name="availableLanguage" minOccurs="1" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Holding element for sub-elements describing the language(s) by which visitors may communicate with staff or other park resources. 
+                            Uses CDWALite "termsource" for to standardize vocatulary. 
+                            Schema recommends using Dublin Core "ISO639-2" as controlled vocabulary for languages. 
+                        </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="language" minOccurs="1" maxOccurs="unbounded" type="xs:string"></xs:element>
