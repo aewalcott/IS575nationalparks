@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- NO default schema, so all elements must have prefixes -->
 
 <NationalPark 
     xmlns:cd="http://www.getty.edu/CDWA/CDWALite"
